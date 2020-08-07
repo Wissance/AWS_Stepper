@@ -28,6 +28,8 @@ type TaskData struct {
     Retry Retry
     Catch Catch
 
+
+
     // Data Related to Lambda Execution
     // Input path is a JSON from raw JSON that task process and pass to lambda
     InputPath interface{}
