@@ -18,7 +18,7 @@ const(
 )
 
 // Fat Task Data that could accumulate data from any state (everything that could be stored
-type TaskData struct {
+type State struct {
     Comment string `json:",omitempty"`
     Type TaskType
     Resource string `json:",omitempty"`
@@ -27,6 +27,8 @@ type TaskData struct {
 
     Retry Retry `json:",omitempty"`
     Catch Catch `json:",omitempty"`
+
+    Branches []StateMachine
 
     // Data Related to Lambda Execution
     // Input path is a JSON from raw JSON that task process and pass to lambda

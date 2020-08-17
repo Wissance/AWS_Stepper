@@ -3,18 +3,13 @@ package language
 type StateMachine struct {
 	Comment string
 	StartAt string
-	Tasks []TaskData
+	States []State
 }
 
 type StateMachineExecutionResult struct {
 	Status bool
 	Error* error
 	ResultData interface{}
-}
-
-// this is a micro machine that is used for store Branches Items
-type MicroStateMachine struct {
-
 }
 
 ////////////////////////////////////////////////////// PUBLIC FUNCTIONS ///////////////////////////////////////////////
